@@ -1,0 +1,104 @@
+ @books = http://localhost:3001/api/v1/books
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJEYW5pZWwiLCJlbWFpbCI6ImRhbmllbC5zdGFmZm9yZEBpbnRlZ3JpZnkuaW8iLCJpc0FkbWluIjp0cnVlLCJpZCI6IjVlNjgwNmJhZDIzYjhkOTFiZDYzMzk4NCIsImlhdCI6MTU4NDAwNjgxNSwiZXhwIjoxNTg0MTc5NjE1fQ.zeMN49yX2czA8cN_cY130-x_p3FE944G5HkZgArB2kg
+GET {{books}}
+Authorization: {{token}}
+##########
+
+GET {{books}}/?page=0&limit=2
+Authorization: {{token}}
+
+#######
+
+GET {{books}}/book-filter
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "searchField": "isBorrowed",
+  "searchTerm": true
+}
+
+#######
+
+GET {{books}}/333333323
+Authorization: {{token}}
+
+#######
+
+POST {{books}}
+Content-Type: application/json
+Authorization: {{token}}
+
+
+{
+   "title": "Tale of Three Cities",
+   "isbn":333333323,
+   "authors":
+    [{
+      "firstName": "Charles",
+      "lastName": "Dickens"
+      },
+       {
+      "firstName": "22222222",
+      "lastName": "Smith"
+    }]
+}
+
+##########
+
+POST {{books}}
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+   "title": "Random title5",
+   "isbn":333333323,
+   "authors":
+    [{
+      "firstName": "Bob2",
+      "lastName": "Johnsomns"
+      }
+    ]
+}
+
+##########
+
+//Update by ID
+PUT {{books}}/5e5e5bf5c32dc47dc9d0d581
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+"title": "Super new book title"
+}
+
+##########
+
+DELETE {{books}}/5e58ef19cba3c6d7bdc9f972
+Authorization: {{token}}
+
+########
+
+DELETE {{books}}/555555
+Authorization: {{token}}
+
+
+#####
+PUT {{books}}/book-lend
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+"bookId": "5e6a481eeef86d764913de64",
+"userId": "5e6a408eeef86d764913de5f"
+}
+
+#####
+PUT {{books}}/book-return
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+"bookId": "5e6a481eeef86d764913de64",
+"userId": "5e6a408eeef86d764913de5f"
+}

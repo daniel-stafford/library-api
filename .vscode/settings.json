@@ -1,0 +1,26 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#d9d9d9",
+    "activityBar.activeBackground": "#d9d9d9",
+    "activityBar.activeBorder": "#cf70cf",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#cf70cf",
+    "activityBarBadge.foreground": "#15202b",
+    "titleBar.activeBackground": "#c0c0c0",
+    "titleBar.inactiveBackground": "#c0c0c099",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99",
+    "statusBar.background": "#c0c0c0",
+    "statusBarItem.hoverBackground": "#a6a6a6",
+    "statusBar.foreground": "#15202b",
+    "statusBar.border": "#c0c0c0",
+    "titleBar.border": "#c0c0c0"
+  },
+  "peacock.color": "#C0C0C0",
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "host": "http://localhost:3001/api/v1/"
+    }
+  }
+}

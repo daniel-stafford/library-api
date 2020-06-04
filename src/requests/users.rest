@@ -1,0 +1,37 @@
+ @users = http://localhost:3001/api/v1/users
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJEYW5pZWwiLCJlbWFpbCI6ImRhbmllbC5zdGFmZm9yZEBpbnRlZ3JpZnkuaW8iLCJpc0FkbWluIjp0cnVlLCJpZCI6IjVlNjgwNmJhZDIzYjhkOTFiZDYzMzk4NCIsImlhdCI6MTU4NDAwNjgxNSwiZXhwIjoxNTg0MTc5NjE1fQ.zeMN49yX2czA8cN_cY130-x_p3FE944G5HkZgArB2kg
+
+GET {{users}}
+Authorization: {{token}}
+
+##########
+
+GET {{users}}/5e5e5f82c32dc47dc9d0d583
+Authorization: {{token}}
+
+#######
+
+POST {{users}}
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+   "firstName": "Mikko",
+   "lastName":"asjknfea",
+   "email": "suomionparas@gmail.com"
+}
+
+##########
+
+PUT {{users}}/5e5c09795f015a55aca59d24
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+   "firstName": "Teemu"
+}
+
+##########
+
+DELETE {{users}}/5e5c09795f015a55aca59d24
+Authorization: {{token}}

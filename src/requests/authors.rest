@@ -1,0 +1,30 @@
+ @authors = http://localhost:3001/api/v1/authors
+
+GET {{authors}}
+
+##########
+
+GET {{authors}}/5e5910c23d0b699b3c234f73
+
+#######
+
+POST {{authors}}
+Content-Type: application/json
+
+{
+   "firstName": "Charles",
+   "lastName":"Dickens"
+}
+
+##########
+
+PUT {{authors}}/5e6204a5447ddd4f561b167e
+Content-Type: application/json
+
+{
+   "lastName": "Mikko"
+}
+
+##########
+
+DELETE {{authors}}/5e59131b47ca64a688cbe9e4

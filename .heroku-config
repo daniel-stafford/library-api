@@ -1,0 +1,12 @@
+MONGODB_URI=mongodb+srv://fullstack:fullstack@cluster0-luwqy.mongodb.net/test?retryWrites=true&w=majority
+
+heroku config:set
+
+heroku config:set SESSION_SECRET=ashdfjhasdlkjfhalksdjhflak
+
+heroku config:set JWT_SECRET=ashdfjhasdlkjfhalksdjhflak
+
+
+PORT=3001
+
+heroku config:set ADMIN_EMAIL=daniel.stafford@integrify.io
